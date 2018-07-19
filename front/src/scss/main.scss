@@ -15,7 +15,7 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
-@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display|Walter+Turncoat|Rock+Salt');
 
 /* 1. Main Layout ================================= */
 
@@ -25,6 +25,7 @@ TABLE OF CONTENTS:
 
 body {
 	background: #ccc;
+	overflow: hidden;
 }
 
 .wall {
