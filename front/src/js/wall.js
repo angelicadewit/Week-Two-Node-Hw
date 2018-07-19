@@ -1,7 +1,7 @@
 (function(){
 
     let $wallBody = document.querySelector(`.wall`)
-    let numbers = [1,2,3,4,5,6,7,8,9]
+    let numbers = [1,2,3,4,5,6,7,8]
 
     axios.get(`http://localhost:1337/tag`)
         .then(function (response) {
@@ -34,7 +34,7 @@
 
             
             $pTag.style.top = positioning(numbers) + `%`
-            $pTag.style.left = positioning(numbers) + `%`
+            $pTag.style.right = positioning(numbers) + `%`
             
             $pTag.classList.add(`tag`)
     

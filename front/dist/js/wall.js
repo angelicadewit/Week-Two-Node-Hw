@@ -3,7 +3,7 @@
 (function () {
 
     var $wallBody = document.querySelector(".wall");
-    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
     axios.get("http://localhost:1337/tag").then(function (response) {
         console.log(response);
@@ -34,7 +34,7 @@
             $pTag.style.color = data.color;
 
             $pTag.style.top = positioning(numbers) + "%";
-            $pTag.style.left = positioning(numbers) + "%";
+            $pTag.style.right = positioning(numbers) + "%";
 
             $pTag.classList.add("tag");
 
