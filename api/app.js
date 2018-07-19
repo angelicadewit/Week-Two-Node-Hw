@@ -17,7 +17,7 @@ app.get('/', function(req, res){
 
 app.post('/tag', function(req, res){
     res.send(`This is how you add tag`)
-    tags.push(req.body.tag)
+    tags.push(req.body)
     console.log(`tags array:`, tags)
 })
 
