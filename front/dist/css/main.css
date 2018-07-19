@@ -79,6 +79,7 @@ body {
 
 body.wall {
 	background-image: url(../img/brick2.jpg);
+	background-position: fixed;
 }
 
 /* 2. Content ================================= */

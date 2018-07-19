@@ -3,6 +3,7 @@
 (function () {
 
     var $wallBody = document.querySelector(".wall");
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     axios.get("http://localhost:1337/tag").then(function (response) {
         console.log(response);
@@ -11,10 +12,18 @@
 
     function randomizer(array) {
         var randomValue = array[Math.floor(Math.random() * array.length)];
-        console.log(randomValue);
+        return randomValue;
     }
 
-    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    function positioning(numbers) {
+        var newValue = "";
+        for (var i = 0; i <= 1; i++) {
+            newValue += randomizer(numbers);
+        }console.log(newValue);
+        return newValue;
+    }
+
+    positioning(numbers);
 
     function postToWall(tags) {
         tags.data.forEach(function (data) {
@@ -23,6 +32,9 @@
 
             $pTag.textContent = data.text;
             $pTag.style.color = data.color;
+
+            $pTag.style.top = positioning(numbers) + "%";
+            $pTag.style.left = positioning(numbers) + "%";
 
             $pTag.classList.add("tag");
 
