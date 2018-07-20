@@ -1,4 +1,4 @@
-let $tagButton = document.querySelector(`button.tagit`)
+let $tagButton = document.querySelector(`button.post`)
 let enteredTag = document.querySelector(`[name="tag"]`)
 let modalClose = document.querySelector(`.close`)
 let modal = document.querySelector(`.modal-wrapper`)

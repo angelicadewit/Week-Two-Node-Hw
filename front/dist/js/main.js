@@ -1,6 +1,6 @@
 'use strict';
 
-var $tagButton = document.querySelector('button.tagit');
+var $tagButton = document.querySelector('button.post');
 var enteredTag = document.querySelector('[name="tag"]');
 var modalClose = document.querySelector('.close');
 var modal = document.querySelector('.modal-wrapper');
