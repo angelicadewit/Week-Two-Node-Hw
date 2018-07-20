@@ -85,9 +85,6 @@ h1 {
 }
 
 .index {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	font-family: Raleway;
 	background: url(../img/indexbg.png);
 	height: 100vh;
@@ -185,6 +182,8 @@ p.tag {
 }
 
 .form-container {
+	margin: 0 auto;
+	transform: translateY(30%);
 	max-width: 640px;
 	background: white;
 	display: flex;
@@ -317,6 +316,43 @@ form .colors input[type="color"] {
 .form-buttons {
 	margin-left: calc(50% - 20%);
 	padding: 10px 0px;
+}
+
+.modal-wrapper {
+	display: none;
+}
+
+.modal-wrapper.is-visible {
+	display: block;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 100;
+}
+
+.is-visible .modal-overlay {
+	transition: .5s;
+}
+
+.is-closing .modal-overlay {
+	transition: .5s;
+}
+
+.modal-content {
+	position: absolute;
+	background: white;
+	z-index: 101;
+	width: 400px;
+	height: 300px;
+	border-radius: 20px;
+	padding: 20px;
+	left: calc(50% - 200px);
+	top: calc(50% - 150px);
 }
 
 /*# sourceMappingURL=main.css.map */

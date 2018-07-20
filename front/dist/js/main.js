@@ -2,6 +2,8 @@
 
 var $tagButton = document.querySelector('button.tagit');
 var enteredTag = document.querySelector('[name="tag"]');
+var modalClose = document.querySelector('.close');
+var modal = document.querySelector('.modal-wrapper');
 
 enteredTag.addEventListener("keyup", function () {
 	if (enteredTag.value.length === 0) {
@@ -27,5 +29,14 @@ $tagButton.addEventListener('click', function () {
 	});
 
 	enteredTag.value = '';
+	modal.classList.add('is-visible');
+});
+
+modalClose.addEventListener('click', function (event) {
+	modal.classList.add('is-closing');
+	setTimeout(function () {
+		modal.classList.remove('is-visible');
+		modal.classList.remove('is-closing');
+	}, 500);
 });
 //# sourceMappingURL=main.js.map

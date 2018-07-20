@@ -1,5 +1,7 @@
 let $tagButton = document.querySelector(`button.tagit`)
 let enteredTag = document.querySelector(`[name="tag"]`)
+let modalClose = document.querySelector(`.close`)
+let modal = document.querySelector(`.modal-wrapper`)
 
 enteredTag.addEventListener("keyup",function(){
 	if(enteredTag.value.length === 0){
@@ -23,14 +25,24 @@ $tagButton.addEventListener(`click`, function() {
 		color: enteredColor,
 	})
 		.then(function (response) {
-			console.log(response);
+			console.log(response)
 		})
 		.catch(function (error) {
-			console.log(error);
+			console.log(error)
 		});
 	
-	enteredTag.value = ``;
+	enteredTag.value = ``
+	modal.classList.add(`is-visible`)
 })
+
+modalClose.addEventListener(`click`, function (event) {
+	modal.classList.add('is-closing')
+	setTimeout(function () {
+		modal.classList.remove('is-visible')
+		modal.classList.remove('is-closing')
+	}, 500)
+})
+	
 
 
 
