@@ -3,8 +3,6 @@
 (function () {
 
     var $wallBody = document.querySelector(".wall");
-    var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-    var rotationNumbers = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];
     var fontFamily = ["Permanent Marker", "Sedgwick Ave Display", "Walter Turncoat", "Rock Salt", "Short Stack"];
 
     axios.get("http://localhost:1337/tag").then(function (response) {

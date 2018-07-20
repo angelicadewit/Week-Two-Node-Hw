@@ -11,10 +11,30 @@
 
 		
 	</head>
-	<body>
-		
-		<input name="tag" placeholder="Tag" value="tag"> <input name="color" placeholder="Color" value="red">
-		<button class="tagit">Tag it.</button>
+	<body class="index">
+
+		<section class="form-container">
+			<section class="form-header">
+				<h1>Tag Wall</h1>
+				<p>Add some graffiti to a blank brick wall</p>
+				<p>Hit the tag button to post something or the view button to see it</p>
+			</section>
+			<form>
+
+				<div class="float-label-container">
+					<input name="tag" id="tag" type="text" required="required"><label for="tag">Tag Something</label>
+				</div>
+				<div class="colors">
+					<label for="color">Pick a Color:</label>
+					<input name="color" value="#dddddd" type="color" id="color">
+				</div>
+			</form>
+			<div class="form-buttons">
+				<button class="btn tagit" disabled="true">Tag it.</button> <a href="wall.html"><button class="btn viewit">View it.</button></a>
+			</div>
+				
+		</section>
+	
 		
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="dist/js/main.js"></script>
