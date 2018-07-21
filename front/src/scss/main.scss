@@ -40,7 +40,7 @@ h1{
 
 .index{
 	font-family: Raleway;
-	background: url(../img/indexbg.png);
+	background: url(../img/indexbg2.jpg);
 	height: 100vh;
 }
 
@@ -67,9 +67,11 @@ p.tag {
 	background: rgba(0,0,0,0.5);background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 33%, rgba(0,0,0,0.17) 82%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 33%,rgba(0,0,0,0.17) 82%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 33%,rgba(0,0,0,0.17) 82%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	padding: 10px 0px;
+	// padding: 10px 0px;
 	z-index: 30;
-    position: relative;
+	position: relative;
+	display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -121,7 +123,6 @@ p.tag {
 }
 
 .write{
-	margin-left: 35%;
 	&:before{
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABOUlEQVRIie3WwSsEYRzG8U/UhuQsycEf4OSgbdu2TQ5kcyJL/hsHZ/kbnLTtUZKzJLRnSZuDJEdSyuF9J9OUrJlx85zmfead7/x+zzvv2wwrRxPYwCqmcYd3GCoBXsVNhI9iEz3Ml8BWwwuWM/660MV4UfgDTtBBJXO/i3beiGo4xBZW8BbHI6k515jNC++jkfIa+MCRr04OsZ0H/pCBJ95ihHawhFvh6/oVPFt54jXjuIJjYeHrReHVWHkzMy/b4UDw72L5yRsI/lMsaXjaywX/j+VvY1nA0wCgXHDCNu/jHK0IKCUWwiH1hBlhy5/hNV4Xrjx5uJfxTrFWBhx2cZDxFoW46nLGktaFcEA1Ut4U7vGsQOUwKeTfii/Zx1UEd4V4CqktLOgjLrEnVDxWFJxoDjvC70bp+gQDq16NrMR/awAAAABJRU5ErkJggg==") no-repeat left center transparent;
 	}
@@ -148,6 +149,11 @@ p.tag {
 	padding: 20px;
 	color: $primary-light;
 	background: $accent-light;
+
+	p{
+		font-size: 1.2em;
+		padding-bottom: 5px;
+	}
 }
 
 form{
@@ -240,6 +246,7 @@ form{
 
 	&:disabled{
 		background: #ff7c91;
+		cursor: default;
 	}
 
 	&:active {
@@ -276,16 +283,17 @@ form{
 }
 
 .form-buttons{
-	margin-left: calc(50% - 20%);
+	display: flex;
+    justify-content: space-around;
 	padding: 10px 0px;
 }
 
 .modal-wrapper {
 	display: none;
-  }
-  
-.modal-wrapper.is-visible {
-	display: block;
+
+	&.is-visible {
+		display: block;
+	}
 }
   
 .modal-overlay {
@@ -295,14 +303,14 @@ form{
 	width: 100%;
 	background-color: rgba(0, 0, 0, .75);
 	z-index: 100;
-}
   
-.is-visible .modal-overlay {
-	transition: .5s;
-}
+	&.is-visible {
+		transition: .5s;
+	}
   
-.is-closing .modal-overlay {
-	transition: .5s;
+	&.is-closing{
+		transition: .5s;
+	}
 }
   
 .modal-content {
@@ -315,6 +323,15 @@ form{
 	padding: 20px;
 	left: calc(50% - 200px);
 	top: calc(50% - 150px);
+
+	h1{
+		padding-bottom: 10px;
+	}
+
+	p{
+		font-size: 1.25em;
+		padding-bottom: 20px;
+	}
 }
 
 

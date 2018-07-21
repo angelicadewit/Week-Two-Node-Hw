@@ -16,7 +16,7 @@
 
     function numbersRange(min, max) {
         return Math.random() * (max - min) + min;
-      }
+    }
     
     function postToWall(tags) {
         tags.data.forEach(data => {
