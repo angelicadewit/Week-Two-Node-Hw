@@ -1,7 +1,7 @@
 (function(){
 
     let $wallBody = document.querySelector(`.wall`)
-    let fontFamily = ["Permanent Marker", "Sedgwick Ave Display", "Walter Turncoat", "Rock Salt", "Short Stack"]
+    let fontFamily = [`Permanent Marker`, `Sedgwick Ave Display`, `Walter Turncoat`, `Rock Salt`, `Short Stack`]
 
     axios.get(`http://localhost:1337/tag`)
         .then(function (response) {
