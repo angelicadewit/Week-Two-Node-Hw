@@ -27,10 +27,9 @@
             $pTag.textContent = data.text;
             $pTag.style.color = data.color;
 
-            $pTag.style.top = numbersRange(10, 85) + "%";
-            $pTag.style.left = numbersRange(10, 85) + "%";
+            $pTag.style.top = numbersRange(1, 85) + "%";
+            $pTag.style.left = numbersRange(1, 85) + "%";
             $pTag.style.transform = "rotate(" + ["+", "-"][Math.round(Math.random())] + numbersRange(0, 40) + "deg)";
-            console.log();
             $pTag.style.fontFamily = randomizer(fontFamily);
             $pTag.style.fontSize = numbersRange(4, 10) + "em";
 
